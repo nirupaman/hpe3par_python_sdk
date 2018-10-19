@@ -3685,7 +3685,7 @@ volume_name, lunid, hostname or port")
         :type - string
 
         """
-        return self.client.createSchedule(name, task, taskfreq)
+        return self.client.createSchedule(name, task, taskFreq)
 
     def deleteSchedule(self, name):
         """Delete Schedule
