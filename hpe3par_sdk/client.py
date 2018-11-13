@@ -3723,8 +3723,8 @@ volume_name, lunid, hostname or port")
             mod_request = {
                 'newName': 'myNewName',         # New name of the schedule
                 'taskFrequency': '0 * * * *'    # String containing cron or
-                                                # monthly, hourly, daily, yearly
-                                                # and weekly.
+                                                # @monthly, @hourly, @daily, @yearly
+                                                # and @weekly.
         }
         """        
         return self.client.modifySchedule(name, options)
@@ -3741,5 +3741,6 @@ volume_name, lunid, hostname or port")
         :param name - schedule name to suspend
         :type name - string
         """
-        return self.client.suspendSchedule(name)
+        return self.client.resumeSchedule(name)
+
 
